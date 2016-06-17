@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <form name="userForm" role="form" class="container " novalidate>
+                <div class="form-group" ng-class="{ 'has-error has-danger': userForm.username.$touched && userForm.username.$invalid }">
+                    <label class="form-control-label" for="username">Username:</label>
+                    <input id="txtusername" name="username" ng-class="{ 'has-error form-control-danger': userForm.username.$touched && userForm.username.$invalid }" class="form-control" type="text" ng-model="loginCtrl.username" required placeholder="Enter username..." />
+                    <div class="errorMessage" ng-messages="userForm.username.$error" ng-show="userForm.username.$touched && userForm.username.$invalid">
+                        <div ng-messages-include="app/loginModule/templates/error-messages.template.html"></div>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error has-danger': userForm.password.$touched && userForm.password.$invalid }">
+                    <label class="form-control-label" for="password">Password:</label>
+                    <input id="txtpassword" name="password" ng-class="{ 'has-error form-control-danger': userForm.password.$touched && userForm.username.$invalid }" class="form-control" type="text" ng-model="loginCtrl.password" required placeholder="Enter password..." />
+                    <div class="errorMessage" ng-messages="userForm.password.$error" ng-show="userForm.password.$touched && userForm.password.$invalid">
+                        <div ng-messages-include="app/loginModule/templates/error-messages.template.html"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" ng-disabled="userForm.$invalid" ng-click="loginCtrl.login()"><span class="glyphicon glyphicon-save"></span> Login</button>
+                    <button class="btn btn-warning btn-block" ng-click="loginCtrl.resetLogin()"><span class="glyphicon glyphicon-alert"></span> Reset</button>
+                </div>
+                <pre>form is valid = {{loginCtrl.$valid}}</pre>
+                <pre>form = {{loginCtrl|json}}</pre>
+                <pre>{{loginCtrl.userlogon |json}}</pre>
+            </form>
+        </div>
+    </div>
+</div>
