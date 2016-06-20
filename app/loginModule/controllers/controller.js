@@ -28,3 +28,14 @@ angular.module('appTesting').controller('LoginController', function LoginControl
     model.login = login;
     model.resetLogin = resetLogin;
 });
+
+angular.module('appTesting').controller('UserController', function UserController($routeParams, UsersService) {
+    "use strict";
+    var model = this;
+
+    var initController = function initController() {
+        model.user = UsersService.getUserById(parseInt($routeParams.id)) || {};
+    };
+
+    initController();
+});

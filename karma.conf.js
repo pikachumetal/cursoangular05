@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Fri Jun 17 2016 09:55:26 GMT+0200 (Hora de verano romance)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -15,6 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/phantomjs-polyfill-find/find-polyfill.js',
       'node_modules/angular/angular.js',
       'node_modules/angular-route/angular-route.js',
       'node_modules/angular-messages/angular-messages.js',
@@ -41,8 +42,8 @@ module.exports = function(config) {
 
     // optionally, configure the reporter
     coverageReporter: {
-      type : 'html',
-      dir : 'coverage/'
+      type: 'html',
+      dir: 'coverage/'
     },
 
     // test results reporter to use
@@ -71,7 +72,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     //browsers: ['Chrome','Firefox','IE','Edge'],
-    browsers:['PhantomJS'],
+    browsers: ['PhantomJS2'],
 
 
     // Continuous Integration mode

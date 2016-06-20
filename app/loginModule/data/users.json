@@ -1,0 +1,16 @@
+[{
+    "username": "pikachu",
+    "password": "1234",
+    "lastLogin": "2010-10-23T11:55:00.000Z",
+    "id": 1
+}, {
+    "username": "bulbasur",
+    "password": "5678",
+    "lastLogin": "2016-10-23T11:55:00.000Z",
+    "id": 1
+}, {
+    "username": "charmander",
+    "password": "9012",
+    "lastLogin": "2015-10-23T11:55:00.000Z",
+    "id": 1
+}]

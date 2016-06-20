@@ -22,7 +22,7 @@
                 </div>
                 <pre>form is valid = {{loginCtrl.$valid}}</pre>
                 <pre>form = {{loginCtrl|json}}</pre>
-                <pre>{{loginCtrl.userlogon |json}}</pre>
+                <user-logged userlogon="loginCtrl.userlogon" username="loginCtrl.username" password="loginCtrl.password"></user-logged>
             </form>
         </div>
     </div>
